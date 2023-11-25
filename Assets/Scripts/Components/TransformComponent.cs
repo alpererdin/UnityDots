@@ -1,7 +1,9 @@
-namespace Components
+using UnityEngine;
+using Unity.Entities;
+using Unity.Mathematics;
+
+public struct TransformComponent : IComponentData
 {
-    public struct TransformComponent
-    {
-        
-    }
+    public float3 Rotation;
 }
+ 
