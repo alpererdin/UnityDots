@@ -154,6 +154,334 @@ public partial class @DOTSDemo: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""ConstructionBindings"",
+            ""id"": ""a8abf57f-c6bf-4481-b336-6f7d66561cec"",
+            ""actions"": [
+                {
+                    ""name"": ""BuildOilRig1"",
+                    ""type"": ""Button"",
+                    ""id"": ""8ecd642c-c0ce-4122-8481-888c40538ae8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BuildOilRig2"",
+                    ""type"": ""Button"",
+                    ""id"": ""389a9a07-a502-4052-a0eb-e22a303b6c06"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BuildOilRig3"",
+                    ""type"": ""Button"",
+                    ""id"": ""e894ce1f-42a7-42fc-8191-690b8d2dab91"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BuildOilRig4"",
+                    ""type"": ""Button"",
+                    ""id"": ""6524ff3b-5237-4cbc-ab36-0d77e6a13b0e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BuildOilRig5"",
+                    ""type"": ""Button"",
+                    ""id"": ""d40261c8-47cb-4539-9714-b51682a2281a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BuildFactory1"",
+                    ""type"": ""Button"",
+                    ""id"": ""ba0ccdfd-4122-4c4b-a525-c708a2588766"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BuildFactory2"",
+                    ""type"": ""Button"",
+                    ""id"": ""6ef854e6-f178-448e-963c-3728bc3f4d4a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BuildFactory3"",
+                    ""type"": ""Button"",
+                    ""id"": ""b2557f67-c41f-4df2-92ee-03153767663c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BuildFactory4"",
+                    ""type"": ""Button"",
+                    ""id"": ""30c43a11-aebb-484a-850c-abcd0bd5b199"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BuildFactory5"",
+                    ""type"": ""Button"",
+                    ""id"": ""e09a6e1b-98c5-4879-8a2d-dea970b9bdbc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BuildFactory6"",
+                    ""type"": ""Button"",
+                    ""id"": ""a459ec49-14be-49fc-b4f8-9766c74b33b1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BuildFactory7"",
+                    ""type"": ""Button"",
+                    ""id"": ""641e25e4-c8d5-445c-9bbf-b8d14976bbd9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BuildFactory8"",
+                    ""type"": ""Button"",
+                    ""id"": ""df10ec0e-b4b0-4caa-b621-7f06721fd8d7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BuildFactory9"",
+                    ""type"": ""Button"",
+                    ""id"": ""7083c5ce-7b09-4fcc-9452-df25eb8f55fe"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BuildFactory10"",
+                    ""type"": ""Button"",
+                    ""id"": ""5a274da1-5cc2-4e9e-9476-ad21ffd80727"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Marche"",
+                    ""type"": ""Button"",
+                    ""id"": ""f8c64211-dabb-4050-a20d-f66226fd772d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""091e06e0-12a9-4b51-b200-8b5e23027e82"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BuildOilRig1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""71a9f94c-bc90-4a9a-b8d2-aa8489acf2b1"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BuildOilRig2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7b051540-8f8e-4092-a287-1764391dc490"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BuildOilRig3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e764d820-f053-47d3-b2aa-1d1b339b6fa4"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BuildOilRig4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""08626d44-d497-4c08-a4bf-a1f4262347d9"",
+                    ""path"": ""<Keyboard>/t"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BuildOilRig5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""26c21eaf-c11e-49e6-a64f-534a589aa1ce"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BuildFactory1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2daacfb6-87f8-440c-b67b-8a23132e044f"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BuildFactory2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""15069eba-4b8b-4d38-8404-f48c2587c1f0"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BuildFactory3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c409a5d7-70e4-491b-b321-99200599409f"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BuildFactory4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ec67aaf4-2f12-4a60-8aba-b52e85f2c6e0"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BuildFactory5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""abfc708a-4848-4659-a3fe-fa1edbed8724"",
+                    ""path"": ""<Keyboard>/6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BuildFactory6"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""91d17166-eded-4ca1-bb22-e68ab90ffe16"",
+                    ""path"": ""<Keyboard>/7"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BuildFactory7"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ef733550-dbb5-404e-809a-dce0b1f399e6"",
+                    ""path"": ""<Keyboard>/8"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BuildFactory8"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bc8ca1f1-ca26-4a68-9739-8a3d746d55da"",
+                    ""path"": ""<Keyboard>/9"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BuildFactory9"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b7be251e-27a8-41d8-8d1a-9a9b68b4df88"",
+                    ""path"": ""<Keyboard>/0"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BuildFactory10"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d7567aff-fb4d-4810-b007-946eb28c1568"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Marche"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -164,6 +492,24 @@ public partial class @DOTSDemo: IInputActionCollection2, IDisposable
         m_DemoBindings_PlayerFire = m_DemoBindings.FindAction("PlayerFire", throwIfNotFound: true);
         m_DemoBindings_GetRandomInt = m_DemoBindings.FindAction("GetRandomInt", throwIfNotFound: true);
         m_DemoBindings_GetRandomFloat = m_DemoBindings.FindAction("GetRandomFloat", throwIfNotFound: true);
+        // ConstructionBindings
+        m_ConstructionBindings = asset.FindActionMap("ConstructionBindings", throwIfNotFound: true);
+        m_ConstructionBindings_BuildOilRig1 = m_ConstructionBindings.FindAction("BuildOilRig1", throwIfNotFound: true);
+        m_ConstructionBindings_BuildOilRig2 = m_ConstructionBindings.FindAction("BuildOilRig2", throwIfNotFound: true);
+        m_ConstructionBindings_BuildOilRig3 = m_ConstructionBindings.FindAction("BuildOilRig3", throwIfNotFound: true);
+        m_ConstructionBindings_BuildOilRig4 = m_ConstructionBindings.FindAction("BuildOilRig4", throwIfNotFound: true);
+        m_ConstructionBindings_BuildOilRig5 = m_ConstructionBindings.FindAction("BuildOilRig5", throwIfNotFound: true);
+        m_ConstructionBindings_BuildFactory1 = m_ConstructionBindings.FindAction("BuildFactory1", throwIfNotFound: true);
+        m_ConstructionBindings_BuildFactory2 = m_ConstructionBindings.FindAction("BuildFactory2", throwIfNotFound: true);
+        m_ConstructionBindings_BuildFactory3 = m_ConstructionBindings.FindAction("BuildFactory3", throwIfNotFound: true);
+        m_ConstructionBindings_BuildFactory4 = m_ConstructionBindings.FindAction("BuildFactory4", throwIfNotFound: true);
+        m_ConstructionBindings_BuildFactory5 = m_ConstructionBindings.FindAction("BuildFactory5", throwIfNotFound: true);
+        m_ConstructionBindings_BuildFactory6 = m_ConstructionBindings.FindAction("BuildFactory6", throwIfNotFound: true);
+        m_ConstructionBindings_BuildFactory7 = m_ConstructionBindings.FindAction("BuildFactory7", throwIfNotFound: true);
+        m_ConstructionBindings_BuildFactory8 = m_ConstructionBindings.FindAction("BuildFactory8", throwIfNotFound: true);
+        m_ConstructionBindings_BuildFactory9 = m_ConstructionBindings.FindAction("BuildFactory9", throwIfNotFound: true);
+        m_ConstructionBindings_BuildFactory10 = m_ConstructionBindings.FindAction("BuildFactory10", throwIfNotFound: true);
+        m_ConstructionBindings_Marche = m_ConstructionBindings.FindAction("Marche", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -291,11 +637,196 @@ public partial class @DOTSDemo: IInputActionCollection2, IDisposable
         }
     }
     public DemoBindingsActions @DemoBindings => new DemoBindingsActions(this);
+
+    // ConstructionBindings
+    private readonly InputActionMap m_ConstructionBindings;
+    private List<IConstructionBindingsActions> m_ConstructionBindingsActionsCallbackInterfaces = new List<IConstructionBindingsActions>();
+    private readonly InputAction m_ConstructionBindings_BuildOilRig1;
+    private readonly InputAction m_ConstructionBindings_BuildOilRig2;
+    private readonly InputAction m_ConstructionBindings_BuildOilRig3;
+    private readonly InputAction m_ConstructionBindings_BuildOilRig4;
+    private readonly InputAction m_ConstructionBindings_BuildOilRig5;
+    private readonly InputAction m_ConstructionBindings_BuildFactory1;
+    private readonly InputAction m_ConstructionBindings_BuildFactory2;
+    private readonly InputAction m_ConstructionBindings_BuildFactory3;
+    private readonly InputAction m_ConstructionBindings_BuildFactory4;
+    private readonly InputAction m_ConstructionBindings_BuildFactory5;
+    private readonly InputAction m_ConstructionBindings_BuildFactory6;
+    private readonly InputAction m_ConstructionBindings_BuildFactory7;
+    private readonly InputAction m_ConstructionBindings_BuildFactory8;
+    private readonly InputAction m_ConstructionBindings_BuildFactory9;
+    private readonly InputAction m_ConstructionBindings_BuildFactory10;
+    private readonly InputAction m_ConstructionBindings_Marche;
+    public struct ConstructionBindingsActions
+    {
+        private @DOTSDemo m_Wrapper;
+        public ConstructionBindingsActions(@DOTSDemo wrapper) { m_Wrapper = wrapper; }
+        public InputAction @BuildOilRig1 => m_Wrapper.m_ConstructionBindings_BuildOilRig1;
+        public InputAction @BuildOilRig2 => m_Wrapper.m_ConstructionBindings_BuildOilRig2;
+        public InputAction @BuildOilRig3 => m_Wrapper.m_ConstructionBindings_BuildOilRig3;
+        public InputAction @BuildOilRig4 => m_Wrapper.m_ConstructionBindings_BuildOilRig4;
+        public InputAction @BuildOilRig5 => m_Wrapper.m_ConstructionBindings_BuildOilRig5;
+        public InputAction @BuildFactory1 => m_Wrapper.m_ConstructionBindings_BuildFactory1;
+        public InputAction @BuildFactory2 => m_Wrapper.m_ConstructionBindings_BuildFactory2;
+        public InputAction @BuildFactory3 => m_Wrapper.m_ConstructionBindings_BuildFactory3;
+        public InputAction @BuildFactory4 => m_Wrapper.m_ConstructionBindings_BuildFactory4;
+        public InputAction @BuildFactory5 => m_Wrapper.m_ConstructionBindings_BuildFactory5;
+        public InputAction @BuildFactory6 => m_Wrapper.m_ConstructionBindings_BuildFactory6;
+        public InputAction @BuildFactory7 => m_Wrapper.m_ConstructionBindings_BuildFactory7;
+        public InputAction @BuildFactory8 => m_Wrapper.m_ConstructionBindings_BuildFactory8;
+        public InputAction @BuildFactory9 => m_Wrapper.m_ConstructionBindings_BuildFactory9;
+        public InputAction @BuildFactory10 => m_Wrapper.m_ConstructionBindings_BuildFactory10;
+        public InputAction @Marche => m_Wrapper.m_ConstructionBindings_Marche;
+        public InputActionMap Get() { return m_Wrapper.m_ConstructionBindings; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(ConstructionBindingsActions set) { return set.Get(); }
+        public void AddCallbacks(IConstructionBindingsActions instance)
+        {
+            if (instance == null || m_Wrapper.m_ConstructionBindingsActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_ConstructionBindingsActionsCallbackInterfaces.Add(instance);
+            @BuildOilRig1.started += instance.OnBuildOilRig1;
+            @BuildOilRig1.performed += instance.OnBuildOilRig1;
+            @BuildOilRig1.canceled += instance.OnBuildOilRig1;
+            @BuildOilRig2.started += instance.OnBuildOilRig2;
+            @BuildOilRig2.performed += instance.OnBuildOilRig2;
+            @BuildOilRig2.canceled += instance.OnBuildOilRig2;
+            @BuildOilRig3.started += instance.OnBuildOilRig3;
+            @BuildOilRig3.performed += instance.OnBuildOilRig3;
+            @BuildOilRig3.canceled += instance.OnBuildOilRig3;
+            @BuildOilRig4.started += instance.OnBuildOilRig4;
+            @BuildOilRig4.performed += instance.OnBuildOilRig4;
+            @BuildOilRig4.canceled += instance.OnBuildOilRig4;
+            @BuildOilRig5.started += instance.OnBuildOilRig5;
+            @BuildOilRig5.performed += instance.OnBuildOilRig5;
+            @BuildOilRig5.canceled += instance.OnBuildOilRig5;
+            @BuildFactory1.started += instance.OnBuildFactory1;
+            @BuildFactory1.performed += instance.OnBuildFactory1;
+            @BuildFactory1.canceled += instance.OnBuildFactory1;
+            @BuildFactory2.started += instance.OnBuildFactory2;
+            @BuildFactory2.performed += instance.OnBuildFactory2;
+            @BuildFactory2.canceled += instance.OnBuildFactory2;
+            @BuildFactory3.started += instance.OnBuildFactory3;
+            @BuildFactory3.performed += instance.OnBuildFactory3;
+            @BuildFactory3.canceled += instance.OnBuildFactory3;
+            @BuildFactory4.started += instance.OnBuildFactory4;
+            @BuildFactory4.performed += instance.OnBuildFactory4;
+            @BuildFactory4.canceled += instance.OnBuildFactory4;
+            @BuildFactory5.started += instance.OnBuildFactory5;
+            @BuildFactory5.performed += instance.OnBuildFactory5;
+            @BuildFactory5.canceled += instance.OnBuildFactory5;
+            @BuildFactory6.started += instance.OnBuildFactory6;
+            @BuildFactory6.performed += instance.OnBuildFactory6;
+            @BuildFactory6.canceled += instance.OnBuildFactory6;
+            @BuildFactory7.started += instance.OnBuildFactory7;
+            @BuildFactory7.performed += instance.OnBuildFactory7;
+            @BuildFactory7.canceled += instance.OnBuildFactory7;
+            @BuildFactory8.started += instance.OnBuildFactory8;
+            @BuildFactory8.performed += instance.OnBuildFactory8;
+            @BuildFactory8.canceled += instance.OnBuildFactory8;
+            @BuildFactory9.started += instance.OnBuildFactory9;
+            @BuildFactory9.performed += instance.OnBuildFactory9;
+            @BuildFactory9.canceled += instance.OnBuildFactory9;
+            @BuildFactory10.started += instance.OnBuildFactory10;
+            @BuildFactory10.performed += instance.OnBuildFactory10;
+            @BuildFactory10.canceled += instance.OnBuildFactory10;
+            @Marche.started += instance.OnMarche;
+            @Marche.performed += instance.OnMarche;
+            @Marche.canceled += instance.OnMarche;
+        }
+
+        private void UnregisterCallbacks(IConstructionBindingsActions instance)
+        {
+            @BuildOilRig1.started -= instance.OnBuildOilRig1;
+            @BuildOilRig1.performed -= instance.OnBuildOilRig1;
+            @BuildOilRig1.canceled -= instance.OnBuildOilRig1;
+            @BuildOilRig2.started -= instance.OnBuildOilRig2;
+            @BuildOilRig2.performed -= instance.OnBuildOilRig2;
+            @BuildOilRig2.canceled -= instance.OnBuildOilRig2;
+            @BuildOilRig3.started -= instance.OnBuildOilRig3;
+            @BuildOilRig3.performed -= instance.OnBuildOilRig3;
+            @BuildOilRig3.canceled -= instance.OnBuildOilRig3;
+            @BuildOilRig4.started -= instance.OnBuildOilRig4;
+            @BuildOilRig4.performed -= instance.OnBuildOilRig4;
+            @BuildOilRig4.canceled -= instance.OnBuildOilRig4;
+            @BuildOilRig5.started -= instance.OnBuildOilRig5;
+            @BuildOilRig5.performed -= instance.OnBuildOilRig5;
+            @BuildOilRig5.canceled -= instance.OnBuildOilRig5;
+            @BuildFactory1.started -= instance.OnBuildFactory1;
+            @BuildFactory1.performed -= instance.OnBuildFactory1;
+            @BuildFactory1.canceled -= instance.OnBuildFactory1;
+            @BuildFactory2.started -= instance.OnBuildFactory2;
+            @BuildFactory2.performed -= instance.OnBuildFactory2;
+            @BuildFactory2.canceled -= instance.OnBuildFactory2;
+            @BuildFactory3.started -= instance.OnBuildFactory3;
+            @BuildFactory3.performed -= instance.OnBuildFactory3;
+            @BuildFactory3.canceled -= instance.OnBuildFactory3;
+            @BuildFactory4.started -= instance.OnBuildFactory4;
+            @BuildFactory4.performed -= instance.OnBuildFactory4;
+            @BuildFactory4.canceled -= instance.OnBuildFactory4;
+            @BuildFactory5.started -= instance.OnBuildFactory5;
+            @BuildFactory5.performed -= instance.OnBuildFactory5;
+            @BuildFactory5.canceled -= instance.OnBuildFactory5;
+            @BuildFactory6.started -= instance.OnBuildFactory6;
+            @BuildFactory6.performed -= instance.OnBuildFactory6;
+            @BuildFactory6.canceled -= instance.OnBuildFactory6;
+            @BuildFactory7.started -= instance.OnBuildFactory7;
+            @BuildFactory7.performed -= instance.OnBuildFactory7;
+            @BuildFactory7.canceled -= instance.OnBuildFactory7;
+            @BuildFactory8.started -= instance.OnBuildFactory8;
+            @BuildFactory8.performed -= instance.OnBuildFactory8;
+            @BuildFactory8.canceled -= instance.OnBuildFactory8;
+            @BuildFactory9.started -= instance.OnBuildFactory9;
+            @BuildFactory9.performed -= instance.OnBuildFactory9;
+            @BuildFactory9.canceled -= instance.OnBuildFactory9;
+            @BuildFactory10.started -= instance.OnBuildFactory10;
+            @BuildFactory10.performed -= instance.OnBuildFactory10;
+            @BuildFactory10.canceled -= instance.OnBuildFactory10;
+            @Marche.started -= instance.OnMarche;
+            @Marche.performed -= instance.OnMarche;
+            @Marche.canceled -= instance.OnMarche;
+        }
+
+        public void RemoveCallbacks(IConstructionBindingsActions instance)
+        {
+            if (m_Wrapper.m_ConstructionBindingsActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IConstructionBindingsActions instance)
+        {
+            foreach (var item in m_Wrapper.m_ConstructionBindingsActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_ConstructionBindingsActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public ConstructionBindingsActions @ConstructionBindings => new ConstructionBindingsActions(this);
     public interface IDemoBindingsActions
     {
         void OnPlayerMove(InputAction.CallbackContext context);
         void OnPlayerFire(InputAction.CallbackContext context);
         void OnGetRandomInt(InputAction.CallbackContext context);
         void OnGetRandomFloat(InputAction.CallbackContext context);
+    }
+    public interface IConstructionBindingsActions
+    {
+        void OnBuildOilRig1(InputAction.CallbackContext context);
+        void OnBuildOilRig2(InputAction.CallbackContext context);
+        void OnBuildOilRig3(InputAction.CallbackContext context);
+        void OnBuildOilRig4(InputAction.CallbackContext context);
+        void OnBuildOilRig5(InputAction.CallbackContext context);
+        void OnBuildFactory1(InputAction.CallbackContext context);
+        void OnBuildFactory2(InputAction.CallbackContext context);
+        void OnBuildFactory3(InputAction.CallbackContext context);
+        void OnBuildFactory4(InputAction.CallbackContext context);
+        void OnBuildFactory5(InputAction.CallbackContext context);
+        void OnBuildFactory6(InputAction.CallbackContext context);
+        void OnBuildFactory7(InputAction.CallbackContext context);
+        void OnBuildFactory8(InputAction.CallbackContext context);
+        void OnBuildFactory9(InputAction.CallbackContext context);
+        void OnBuildFactory10(InputAction.CallbackContext context);
+        void OnMarche(InputAction.CallbackContext context);
     }
 }
