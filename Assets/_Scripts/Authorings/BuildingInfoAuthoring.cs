@@ -11,7 +11,11 @@ public class BuildingInfoAuthoring : MonoBehaviour
     public int Index;
     public string BuildingType;
     public GameObject Prefab;
-   
+    
+    public GameObject TankPrefab;
+    public Sprite TankSprite;
+
+    
 }
 
 public class BuildInfoBaker : Baker<BuildingInfoAuthoring>
@@ -26,7 +30,10 @@ public class BuildInfoBaker : Baker<BuildingInfoAuthoring>
             BuildingType = authoring.BuildingType,
             Prefab = authoring.Prefab,
             IsProducing = false,
-            TimeToFinishProduction = 0
+            TimeToFinishProduction = 0,
+            TankPrefab = authoring.TankPrefab,
+            TankSprite = authoring.TankSprite
+            
         });
     }
 }
