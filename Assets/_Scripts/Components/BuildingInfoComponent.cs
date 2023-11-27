@@ -14,5 +14,9 @@ public class BuildingInfoComponent : IComponentData
     public FixedString32Bytes BuildingType;
     public GameObject Prefab;
     public GameObject SceneObject;
+    
+    public GameObject TankPrefab;
+    public Sprite TankSprite;
+
 
 }
