@@ -10,13 +10,15 @@ public class BuildingInfoComponent : IComponentData
     public int Index;
     public bool IsProducing;
     public long TimeToFinishProduction;
-    public long TimeStartedToProduct;
+    public long TimeStartedToProduce;
     public FixedString32Bytes BuildingType;
     public GameObject Prefab;
     public GameObject SceneObject;
     
     public GameObject TankPrefab;
     public Sprite TankSprite;
+    
+    
 
 
 }
