@@ -47,7 +47,7 @@ public partial class AISystem : SystemBase
                             buildOilRigOnto = ai.NumOilRigs + 1;
                         }
                     }
-                    /*else if (ai.NumTanks < 5)
+                    else if (ai.NumTanks < 5)
                     {
                         // 5 tane tank yapalım
                         if (income.IncomeEnemy >= settings.CostOfTankBuild * ai.AIBuildSpendingFactor)
@@ -100,7 +100,7 @@ public partial class AISystem : SystemBase
 
                             buildATank = true;
                         }
-                    }*/
+                    }
 
                     // tank inşa etmek
                 }).Run();
@@ -113,10 +113,10 @@ public partial class AISystem : SystemBase
                 {
                     BuildOilRig(buildOilRigOnto-1);
                 }
-               /* if (buildATank)
+                if (buildATank)
                 {
                     BuildTank();
-                }*/
+                }
              
      }
        
@@ -154,7 +154,7 @@ public partial class AISystem : SystemBase
 
                                 info.SceneObject = GameObject.Instantiate(info.Prefab, transform.Position, quaternion.identity);
                                 info.SceneObject.transform.localScale = new Vector3(0.5f, 0.5f, -0.5f);
-                                info.SceneObject.transform.Rotate(Vector3.up * -90f);
+                                info.SceneObject.transform.Rotate(Vector3.up );//* -90f
 
                                 finishedFactory = true;
                             }
@@ -200,6 +200,39 @@ public partial class AISystem : SystemBase
                  {
                      ai.NumFactories += 1;
                  }).Schedule();
+         }
+
+         if (finishedTank)
+         {
+             
+             
+                 int tankLife=0;
+                 Entities.ForEach(
+                     (ref SettingsComponent settings )=>
+                     {
+                         tankLife = settings.TankLife;
+
+                     }
+                 ).Run();
+                 for (int i = 0; i < finishedTanks.Count; i++)
+                 {
+                     Entities.WithStructuralChanges().WithoutBurst().
+                         ForEach((Entity e,ref TankEntityTag tag, in TankComponent tankComponent) =>
+                         {
+                             var tankEntity = EntityManager.Instantiate(e);
+                             EntityManager.RemoveComponent(tankEntity, typeof(TankEntityTag));
+                             EntityManager.AddComponentObject(tankEntity, new TankComponent
+                             {
+                                 PlayerFaction = false,
+                                 Status = TankComponent.STATUS_MOVE_TO_BOARD,
+                                 Tank=finishedTanks[i],
+                                 Explosion = tankComponent.Explosion,
+                                 RemainingLife = tankLife 
+                             });
+                         }).Run();
+            
+             }
+
          }
          this.buildingInProgress = buildingInProgress;
     }
@@ -304,5 +337,36 @@ public partial class AISystem : SystemBase
                     }
                 }
             }).Run();
+    }
+
+    private void BuildTank()
+    {
+        int buildingAtFactory = -1;
+        float buildingTimeTank = 0;
+        
+        // 
+
+        Entities.
+            ForEach(
+                (ref SettingsComponent settings) =>
+                {
+                    buildingTimeTank = settings.DurationOfTankBuild;
+                    
+                }).Run();
+        Entities.
+            WithoutBurst().
+            ForEach(
+                (Entity e,ref LocalTransform transform,in BuildingInfoComponent info) =>
+                {
+                    if (info.BuildingType=="EnemyFactory" && info.Built&& !info.IsProducing)
+                    {
+                        info.TimeStartedToProduce = DateTime.Now.Ticks;
+                        info.TimeToFinishProduction = info.TimeStartedToProduce + (long)(buildingTimeTank * 10000000);
+                        info.IsProducing = true;
+                        buildingAtFactory = info.Index;
+
+                    }
+                }).Run();
+                Debug.Log("AI is producing a tank at factory"+ buildingAtFactory);
     }
 }
