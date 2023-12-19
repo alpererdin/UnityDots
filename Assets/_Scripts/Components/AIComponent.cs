@@ -10,6 +10,7 @@ public struct AIComponent : IComponentData
     public float AIBuildTimeFactor;
     public float AIBuildSpendingFactor;
     public float AITankLifeFactor;
+    public float NumTanks;
     
 
 }
