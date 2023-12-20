@@ -236,11 +236,11 @@ public  partial class ConstructionSystem : SystemBase
                 }).Run();
         if (buildingApproved)
         {
-        Entities.ForEach(
-            (ref IncomeComponent income) =>
-            {
-                income.IncomePlayer -= buildCost;
-            }).Run();
+            Entities.ForEach(
+                (ref IncomeComponent income) =>
+                {
+                    income.IncomePlayer -= buildCost;
+                }).Run();
         }
     } 
  
@@ -319,21 +319,26 @@ public  partial class ConstructionSystem : SystemBase
              ).Run();
              for (int i = 0; i < finishedTanks.Count; i++)
              {
-                Entities.WithStructuralChanges().WithoutBurst().
-                    ForEach((Entity e,ref TankEntityTag tag, in TankComponent tankComponent) =>
+                Entities.
+                    WithStructuralChanges().
+                    WithoutBurst().
+                    ForEach(
+                        (Entity e,ref TankEntityTag tag, in TankComponent tankComponent) =>
                         {
                             var tankEntity = EntityManager.Instantiate(e);
                             EntityManager.RemoveComponent(tankEntity, typeof(TankEntityTag));
+                           // if (tankComponent != null)
                             EntityManager.AddComponentObject(tankEntity, new TankComponent
-                                {
-                                        PlayerFaction = true,
-                                        Status = TankComponent.STATUS_MOVE_TO_BOARD,
-                                        Tank=finishedTanks[i],
-                                        Explosion = tankComponent.Explosion,
-                                        RemainingLife = tankLife
-                                });
-                        }
-                    ).Run();
+                            {
+                                PlayerFaction = true,
+                                Status = TankComponent.STATUS_MOVE_TO_BOARD,
+                                Tank = finishedTanks[i],
+                                Explosion = tankComponent.Explosion,
+                                RemainingLife = tankLife,
+                                TargetX = -1,
+                                TargetY = -1,
+                            });
+                        }).Run();
              }
            
          }
