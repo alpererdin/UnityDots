@@ -37,7 +37,8 @@ public class SettingsBaker : Baker<SettingsAuthoring>
             TankReloadTime = authoring.TankReloadTime,
             TankSpeed = authoring.TankSpeed,
             TankLife = authoring.TankLife,
-            BulletSpeed = authoring.BulletSpeed
+            BulletSpeed = authoring.BulletSpeed,
+            
           
         });
     }
