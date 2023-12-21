@@ -7,10 +7,8 @@ public struct AIComponent : IComponentData
 {
     public int NumFactories;
     public int NumOilRigs;
+    public int NumTanks;
     public float AIBuildTimeFactor;
     public float AIBuildSpendingFactor;
     public float AITankLifeFactor;
-    public float NumTanks;
-    
-
 }
