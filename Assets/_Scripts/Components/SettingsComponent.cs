@@ -19,5 +19,7 @@ public struct SettingsComponent : IComponentData
    public float TankReloadTime; //  
    public int TankLife; // 
 
-  
+    
+
+
 }
