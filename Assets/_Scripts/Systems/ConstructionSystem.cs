@@ -11,7 +11,7 @@ using Unity.Transforms;
 public  partial class ConstructionSystem : SystemBase
 {
     private DOTSDemo _demoActions;
-
+    private int autoTankID=1000;
      protected override void OnStartRunning()
     {
         _demoActions = new DOTSDemo();
@@ -34,6 +34,8 @@ public  partial class ConstructionSystem : SystemBase
         _demoActions.ConstructionBindings.BuildOilRig4.performed += BuildOilRig4_performed;
         _demoActions.ConstructionBindings.BuildOilRig5.performed += BuildOilRig5_performed;
         
+        _demoActions.ConstructionBindings.Marche.performed += Marche_performed;
+        
         Entities.
             WithoutBurst().
             ForEach(
@@ -54,6 +56,23 @@ public  partial class ConstructionSystem : SystemBase
 
     #region inputs
 
+    private void Marche_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        int playerTanks = 0;
+
+        Entities.
+            WithoutBurst().
+            ForEach(
+                (ref BattleFieldComponent component) =>
+                {
+                    playerTanks = component.NumPlayerTanks;
+                }).Run();
+
+        if (playerTanks >= 100)
+        {
+            March();
+        }
+    }
     private void BuildFactory1_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         BuildFactory(0);
@@ -167,7 +186,7 @@ public  partial class ConstructionSystem : SystemBase
                }
                else
                {
-                   if (buildCost<= playerIncome && !info.IsProducing)
+                   if (tankCost<= playerIncome && !info.IsProducing)
                    {
                        info.TimeStartedToProduce = DateTime.Now.Ticks;
                        info.TimeToFinishProduction = info.TimeStartedToProduce + ((long)(buildTankTime * 10000000));
@@ -272,14 +291,15 @@ public  partial class ConstructionSystem : SystemBase
                          if(!info.Built)
                          {
                              // fabrika
+                             
                              info.SceneObject = GameObject.Instantiate(info.Prefab, transform.Position, quaternion.identity);
                              info.SceneObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-                           //  info.SceneObject.transform.Rotate(Vector3.up * 90);
+                             info.SceneObject.transform.Rotate(Vector3.up * 90);
                          } else
                          {
                              // tank
                              var tank = GameObject.Instantiate(info.TankPrefab);
-                             tank.transform.position = new Vector3(transform.Position.x + 4, 0, transform.Position.z);
+                             tank.transform.position = new Vector3(transform.Position.x , 0, transform.Position.z-4);
                              finishedATank = true;
                              finishedTanks.Add(tank);
                          }
@@ -317,6 +337,14 @@ public  partial class ConstructionSystem : SystemBase
 
                  }
              ).Run();
+             Entities.
+                 WithoutBurst().
+                 ForEach(
+                     (ref BattleFieldComponent component) =>
+                     {
+                         component.NumPlayerTanks += finishedTanks.Count;
+                     }).Run();
+             
              for (int i = 0; i < finishedTanks.Count; i++)
              {
                 Entities.
@@ -330,18 +358,39 @@ public  partial class ConstructionSystem : SystemBase
                            // if (tankComponent != null)
                             EntityManager.AddComponentObject(tankEntity, new TankComponent
                             {
+                                TankID = ++autoTankID,
+                                EnemyID = -1,
                                 PlayerFaction = true,
                                 Status = TankComponent.STATUS_MOVE_TO_BOARD,
                                 Tank = finishedTanks[i],
                                 Explosion = tankComponent.Explosion,
                                 RemainingLife = tankLife,
                                 TargetX = -1,
-                                TargetY = -1,
+                                TargetY = -1
                             });
                         }).Run();
              }
            
          }
+    }
+    public void March()
+    {
+        // ai 
+        Entities.
+            WithoutBurst().
+            WithNone<TankEntityTag>().
+            ForEach(
+                (in TankComponent tank) =>
+                {
+                    tank.Status = TankComponent.STATUS_SEARCH_FOR_ENEMY;
+                }).Run();
+
+        Entities.
+            ForEach(
+                (ref BattleFieldComponent battle) =>
+                {
+                    battle.BattleStarted = true;
+                }).Run();
     }
 }
 
