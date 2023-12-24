@@ -17,6 +17,7 @@ public partial class UISystem : SystemBase
     float buildTimeOilRig=0;
      int buildCostTank = 0;
       float buildTimeTank = 0;
+      Transform startButton = null;
     protected override void OnStartRunning()
     {
         
@@ -31,7 +32,7 @@ public partial class UISystem : SystemBase
 
         _incomeText = _canvas.Find("TxtIncome").GetComponent<TextMeshProUGUI>();
          //
-         
+         startButton = _canvas.Find("BtnStart");
          Entities.
              WithoutBurst().
              ForEach(
@@ -107,20 +108,20 @@ public partial class UISystem : SystemBase
 
                         if (!info.Built)
                         {
-                            // fabrika inşaatı
+                            // factory
                             value = (buildTimeFactory - value) / buildTimeFactory;
 
                             if (!info.Built && info.IsProducing)
                             {
                                 if (info.TimeToFinishProduction <= DateTime.Now.Ticks)
                                 {
-                                    // bina bitmiş demektir
+                                    // finisged
                                     img.GetComponent<Image>().sprite = info.TankSprite;
                                 }
                             }
                         } else
                         {
-                            // tank üretimi
+                            // tank 
                             value = (buildTimeTank - value) / buildTimeTank;
                         }
                     }
@@ -133,7 +134,7 @@ public partial class UISystem : SystemBase
 
                     if (info.IsProducing)
                     {
-                        // ilerlemeyi belirleyelim
+                        // 
                         img.GetChild(0).gameObject.SetActive(true);
                         img.GetComponent<Image>().color = Color.white;
 
@@ -145,5 +146,42 @@ public partial class UISystem : SystemBase
                     }
                 }
             }).Run();
+        
+        //marche
+        bool marchButtonEnabled = false;
+        Entities.ForEach(
+            (ref BattleFieldComponent battleFieldComponent) =>
+            {
+                marchButtonEnabled = battleFieldComponent.NumPlayerTanks >= 100;
+            }).Run();
+
+        startButton.GetComponent<CanvasGroup>().alpha = marchButtonEnabled ? 1 : 0.5f;
+
+        // winner
+        int playerTanks = 0;
+        int aiTanks = 0;
+        bool gameStarted = false;
+
+        Entities.
+            WithoutBurst().
+            ForEach(
+                (ref BattleFieldComponent component) =>
+                {
+                    playerTanks = component.NumPlayerTanks;
+                    aiTanks = component.NumAITanks;
+                    gameStarted = component.BattleStarted;
+                }).Run();
+
+        if (gameStarted && playerTanks <= 0)
+        {
+            // lose
+            _canvas.Find("TxtDefeat").GetComponent<TextMeshProUGUI>().enabled = true;
+        }
+
+        if (gameStarted && aiTanks <= 0)
+        {
+            // win
+            _canvas.Find("TxtVictory").GetComponent<TextMeshProUGUI>().enabled = true;
+        }
     }
 }
