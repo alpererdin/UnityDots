@@ -1,7 +1,6 @@
-namespace _Scripts.Tags
+using Unity.Entities;
+
+public struct TankDeadTag : IComponentData
 {
-    public struct TankDeadTag
-    {
-        
-    }
+
 }
